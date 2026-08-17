@@ -1,0 +1,21 @@
+product_name,category,order_count,total_units_ordered,total_revenue,pct_fulfillment_issues
+Product 0247,Office Supplies,13789,3469586,301576415.12,31.9
+Product 0211,Electronics,4901,1235545,103563381.9,30.7
+Product 0053,Electronics,3323,825959,105417147.17,32.6
+Product 0044,Food & Beverage,1932,483396,38947215.72,33.1
+Product 0076,Apparel,1765,443204,24376220.0,32.6
+Product 0197,Pharmaceuticals,1672,439985,77463759.1,31.7
+Product 0238,Electronics,1756,438732,12692516.76,31.3
+Product 0149,Pharmaceuticals,1723,426213,20074632.3,31.2
+Product 0164,Industrial Parts,1729,424707,43239419.67,31.5
+Product 0072,Electronics,1676,421067,32249521.53,31.1
+Product 0062,Food & Beverage,1636,407526,30535923.18,30.3
+Product 0125,Automotive,1587,403593,51926275.38,30.9
+Product 0193,Home & Kitchen,1579,392267,19868323.55,31.1
+Product 0060,Automotive,1516,375192,40659557.04,33.8
+Product 0242,Electronics,1427,358276,22603632.84,33.3
+Product 0169,Food & Beverage,1321,339213,16791043.5,33.0
+Product 0014,Apparel,1262,317473,14076752.82,32.7
+Product 0007,Food & Beverage,1247,312800,17588744.0,35.8
+Product 0030,Automotive,1217,307378,36255235.1,32.9
+Product 0248,Apparel,1188,302213,19852371.97,30.5

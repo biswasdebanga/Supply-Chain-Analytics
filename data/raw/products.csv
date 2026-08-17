@@ -1,0 +1,251 @@
+product_id,product_name,category,unit_cost,unit_price,demand_index
+1,Product 0001,Home & Kitchen,30.7,54.07,0.168
+2,Product 0002,Pharmaceuticals,40.1,66.7,0.506
+3,Product 0003,Office Supplies,87.66,128.96,0.14
+4,Product 0004,Food & Beverage,46.0,73.87,0.258
+5,Product 0005,Food & Beverage,45.17,85.56,0.526
+6,Product 0006,Industrial Parts,50.76,99.11,0.248
+7,Product 0007,Food & Beverage,32.56,56.23,2.427
+8,Product 0008,Industrial Parts,26.34,41.55,0.527
+9,Product 0009,Automotive,75.71,112.06,0.442
+10,Product 0010,Automotive,17.76,30.08,0.503
+11,Product 0011,Apparel,23.45,35.59,0.88
+12,Product 0012,Home & Kitchen,44.25,76.53,0.278
+13,Product 0013,Electronics,80.78,147.44,0.999
+14,Product 0014,Apparel,33.95,44.34,2.287
+15,Product 0015,Industrial Parts,31.22,39.05,1.629
+16,Product 0016,Industrial Parts,42.65,61.01,0.489
+17,Product 0017,Apparel,59.44,119.49,0.217
+18,Product 0018,Industrial Parts,38.61,69.47,0.261
+19,Product 0019,Pharmaceuticals,86.7,121.05,1.177
+20,Product 0020,Apparel,88.78,178.16,0.622
+21,Product 0021,Home & Kitchen,44.25,72.99,0.297
+22,Product 0022,Home & Kitchen,131.22,217.13,0.115
+23,Product 0023,Pharmaceuticals,50.07,102.4,1.548
+24,Product 0024,Home & Kitchen,87.09,113.27,0.178
+25,Product 0025,Automotive,58.47,83.78,0.412
+26,Product 0026,Home & Kitchen,57.83,101.08,0.254
+27,Product 0027,Industrial Parts,14.8,20.96,0.31
+28,Product 0028,Industrial Parts,22.08,40.35,0.137
+29,Product 0029,Apparel,39.89,57.12,0.263
+30,Product 0030,Automotive,88.4,117.95,2.223
+31,Product 0031,Apparel,58.96,84.07,0.416
+32,Product 0032,Home & Kitchen,40.12,64.57,0.404
+33,Product 0033,Food & Beverage,68.6,96.02,0.597
+34,Product 0034,Office Supplies,86.55,118.1,0.319
+35,Product 0035,Automotive,48.19,95.48,0.297
+36,Product 0036,Office Supplies,54.86,83.52,0.109
+37,Product 0037,Food & Beverage,50.74,78.98,1.138
+38,Product 0038,Industrial Parts,46.35,60.12,0.835
+39,Product 0039,Food & Beverage,28.54,44.34,0.359
+40,Product 0040,Home & Kitchen,27.07,39.93,0.663
+41,Product 0041,Industrial Parts,68.35,120.91,0.36
+42,Product 0042,Pharmaceuticals,87.49,124.64,0.157
+43,Product 0043,Office Supplies,40.07,80.34,0.174
+44,Product 0044,Food & Beverage,39.49,80.57,3.663
+45,Product 0045,Industrial Parts,11.78,15.72,0.88
+46,Product 0046,Automotive,10.04,13.47,0.325
+47,Product 0047,Apparel,100.29,135.19,1.004
+48,Product 0048,Food & Beverage,29.81,52.96,0.49
+49,Product 0049,Pharmaceuticals,160.08,216.7,1.117
+50,Product 0050,Pharmaceuticals,33.36,65.87,0.747
+51,Product 0051,Food & Beverage,15.18,28.71,0.998
+52,Product 0052,Automotive,50.98,99.25,0.103
+53,Product 0053,Electronics,75.2,127.63,6.179
+54,Product 0054,Home & Kitchen,70.45,147.75,0.122
+55,Product 0055,Apparel,79.52,102.39,0.355
+56,Product 0056,Automotive,24.76,39.4,0.162
+57,Product 0057,Electronics,98.94,150.92,0.203
+58,Product 0058,Apparel,102.22,210.2,0.37
+59,Product 0059,Pharmaceuticals,104.73,182.26,0.322
+60,Product 0060,Automotive,56.0,108.37,2.82
+61,Product 0061,Pharmaceuticals,38.13,53.18,0.347
+62,Product 0062,Food & Beverage,35.99,74.93,3.025
+63,Product 0063,Office Supplies,15.12,25.31,0.587
+64,Product 0064,Apparel,33.84,56.5,0.354
+65,Product 0065,Office Supplies,6.42,13.32,0.615
+66,Product 0066,Pharmaceuticals,13.54,21.31,0.582
+67,Product 0067,Automotive,55.65,88.37,0.245
+68,Product 0068,Electronics,40.93,71.51,0.242
+69,Product 0069,Pharmaceuticals,54.23,73.69,1.936
+70,Product 0070,Automotive,71.92,109.53,0.137
+71,Product 0071,Pharmaceuticals,60.23,85.18,0.489
+72,Product 0072,Electronics,57.25,76.59,3.106
+73,Product 0073,Pharmaceuticals,45.49,90.35,0.289
+74,Product 0074,Office Supplies,29.08,50.92,1.248
+75,Product 0075,Automotive,19.93,30.99,0.284
+76,Product 0076,Apparel,34.43,55.0,3.239
+77,Product 0077,Office Supplies,45.95,74.29,0.171
+78,Product 0078,Office Supplies,49.52,88.55,0.372
+79,Product 0079,Apparel,79.62,162.25,0.487
+80,Product 0080,Food & Beverage,43.46,88.78,0.962
+81,Product 0081,Industrial Parts,65.99,104.45,0.577
+82,Product 0082,Pharmaceuticals,16.78,25.67,1.109
+83,Product 0083,Industrial Parts,56.12,91.67,0.172
+84,Product 0084,Food & Beverage,53.8,93.22,1.165
+85,Product 0085,Office Supplies,98.96,162.55,2.158
+86,Product 0086,Food & Beverage,40.95,74.12,1.019
+87,Product 0087,Office Supplies,39.87,68.63,0.291
+88,Product 0088,Office Supplies,72.21,109.95,0.209
+89,Product 0089,Electronics,21.06,32.51,0.255
+90,Product 0090,Home & Kitchen,55.26,86.86,0.16
+91,Product 0091,Automotive,20.29,26.99,0.744
+92,Product 0092,Pharmaceuticals,123.9,172.36,0.537
+93,Product 0093,Electronics,36.59,68.23,0.538
+94,Product 0094,Electronics,19.33,30.56,0.653
+95,Product 0095,Pharmaceuticals,34.27,49.09,1.933
+96,Product 0096,Pharmaceuticals,55.46,95.85,0.132
+97,Product 0097,Apparel,64.8,122.62,0.361
+98,Product 0098,Apparel,96.05,141.08,0.219
+99,Product 0099,Apparel,31.61,61.73,0.859
+100,Product 0100,Pharmaceuticals,74.1,151.04,1.726
+101,Product 0101,Electronics,13.55,23.82,0.267
+102,Product 0102,Pharmaceuticals,23.56,42.85,0.43
+103,Product 0103,Industrial Parts,17.13,22.18,0.122
+104,Product 0104,Industrial Parts,27.98,57.46,0.434
+105,Product 0105,Automotive,72.19,114.32,0.283
+106,Product 0106,Pharmaceuticals,32.12,65.37,0.654
+107,Product 0107,Automotive,36.18,63.03,0.456
+108,Product 0108,Food & Beverage,56.35,70.66,1.182
+109,Product 0109,Office Supplies,63.22,81.1,0.386
+110,Product 0110,Food & Beverage,36.89,67.45,0.436
+111,Product 0111,Pharmaceuticals,23.45,40.53,1.441
+112,Product 0112,Industrial Parts,112.63,143.33,0.401
+113,Product 0113,Apparel,37.05,69.73,0.667
+114,Product 0114,Pharmaceuticals,39.44,77.87,0.222
+115,Product 0115,Apparel,42.63,71.28,1.008
+116,Product 0116,Office Supplies,67.13,110.49,0.699
+117,Product 0117,Food & Beverage,16.11,20.21,0.729
+118,Product 0118,Electronics,137.15,263.14,0.77
+119,Product 0119,Food & Beverage,38.75,59.33,0.634
+120,Product 0120,Electronics,68.45,136.69,0.138
+121,Product 0121,Automotive,19.5,30.56,0.282
+122,Product 0122,Electronics,53.0,91.71,1.692
+123,Product 0123,Industrial Parts,125.38,185.54,1.318
+124,Product 0124,Automotive,115.61,160.29,1.285
+125,Product 0125,Automotive,67.41,128.66,2.895
+126,Product 0126,Industrial Parts,26.72,44.68,0.564
+127,Product 0127,Office Supplies,93.19,158.98,0.524
+128,Product 0128,Food & Beverage,13.47,27.89,0.471
+129,Product 0129,Apparel,26.06,53.92,0.131
+130,Product 0130,Automotive,45.64,90.24,0.497
+131,Product 0131,Automotive,14.45,20.37,0.929
+132,Product 0132,Home & Kitchen,34.22,60.06,0.262
+133,Product 0133,Automotive,74.96,149.65,1.862
+134,Product 0134,Office Supplies,29.93,46.94,0.68
+135,Product 0135,Food & Beverage,77.0,102.87,0.823
+136,Product 0136,Food & Beverage,157.62,305.68,0.633
+137,Product 0137,Automotive,60.32,100.1,1.271
+138,Product 0138,Home & Kitchen,76.23,131.86,0.425
+139,Product 0139,Food & Beverage,94.99,198.04,0.526
+140,Product 0140,Home & Kitchen,36.31,64.13,0.233
+141,Product 0141,Pharmaceuticals,75.2,121.16,0.489
+142,Product 0142,Home & Kitchen,35.74,55.91,0.232
+143,Product 0143,Home & Kitchen,57.84,92.83,1.372
+144,Product 0144,Apparel,81.78,110.46,0.573
+145,Product 0145,Office Supplies,27.57,53.09,0.564
+146,Product 0146,Apparel,7.0,13.73,1.171
+147,Product 0147,Electronics,25.81,38.5,0.22
+148,Product 0148,Office Supplies,88.71,133.79,0.225
+149,Product 0149,Pharmaceuticals,23.63,47.1,3.163
+150,Product 0150,Industrial Parts,85.92,109.15,0.618
+151,Product 0151,Automotive,25.9,43.83,0.57
+152,Product 0152,Industrial Parts,41.78,68.69,0.108
+153,Product 0153,Apparel,47.6,87.42,0.353
+154,Product 0154,Automotive,23.55,32.71,1.957
+155,Product 0155,Apparel,42.07,76.49,1.238
+156,Product 0156,Pharmaceuticals,15.15,23.79,0.361
+157,Product 0157,Office Supplies,38.41,68.21,0.715
+158,Product 0158,Office Supplies,45.23,58.08,0.336
+159,Product 0159,Home & Kitchen,7.33,12.04,0.416
+160,Product 0160,Food & Beverage,25.66,43.47,0.318
+161,Product 0161,Pharmaceuticals,56.79,81.33,0.219
+162,Product 0162,Industrial Parts,21.68,29.67,0.531
+163,Product 0163,Apparel,62.4,88.0,0.458
+164,Product 0164,Industrial Parts,66.0,101.81,3.146
+165,Product 0165,Automotive,56.65,75.47,0.154
+166,Product 0166,Office Supplies,74.68,153.48,0.412
+167,Product 0167,Electronics,14.39,22.94,1.027
+168,Product 0168,Automotive,83.88,162.53,0.492
+169,Product 0169,Food & Beverage,23.82,49.5,2.439
+170,Product 0170,Office Supplies,50.97,67.21,0.347
+171,Product 0171,Industrial Parts,122.6,221.16,0.178
+172,Product 0172,Electronics,37.88,75.41,1.759
+173,Product 0173,Home & Kitchen,48.34,86.49,0.133
+174,Product 0174,Food & Beverage,23.92,38.62,0.389
+175,Product 0175,Office Supplies,121.92,197.07,0.309
+176,Product 0176,Automotive,25.7,32.91,0.62
+177,Product 0177,Electronics,69.36,118.22,0.905
+178,Product 0178,Electronics,94.9,198.77,0.438
+179,Product 0179,Industrial Parts,73.2,151.15,1.455
+180,Product 0180,Pharmaceuticals,58.73,75.43,0.122
+181,Product 0181,Electronics,50.5,93.42,0.295
+182,Product 0182,Automotive,19.35,29.15,0.587
+183,Product 0183,Pharmaceuticals,118.87,239.83,0.342
+184,Product 0184,Electronics,55.9,72.02,0.173
+185,Product 0185,Electronics,48.36,98.92,0.21
+186,Product 0186,Industrial Parts,22.5,44.14,0.358
+187,Product 0187,Automotive,49.8,67.22,0.311
+188,Product 0188,Food & Beverage,46.51,60.5,0.912
+189,Product 0189,Industrial Parts,122.6,240.23,0.813
+190,Product 0190,Home & Kitchen,48.34,66.82,0.764
+191,Product 0191,Office Supplies,49.31,84.06,0.656
+192,Product 0192,Industrial Parts,22.7,46.04,0.987
+193,Product 0193,Home & Kitchen,29.24,50.65,2.937
+194,Product 0194,Industrial Parts,64.65,102.64,0.272
+195,Product 0195,Electronics,12.31,20.04,1.762
+196,Product 0196,Home & Kitchen,83.62,109.01,0.107
+197,Product 0197,Pharmaceuticals,84.91,176.06,3.079
+198,Product 0198,Office Supplies,27.2,41.18,0.149
+199,Product 0199,Automotive,58.86,83.05,0.156
+200,Product 0200,Food & Beverage,96.65,144.31,0.396
+201,Product 0201,Pharmaceuticals,44.22,91.52,0.179
+202,Product 0202,Electronics,39.22,52.17,0.106
+203,Product 0203,Industrial Parts,42.3,84.06,0.1
+204,Product 0204,Office Supplies,55.82,103.36,0.264
+205,Product 0205,Electronics,31.8,62.19,1.313
+206,Product 0206,Office Supplies,37.13,77.21,0.16
+207,Product 0207,Automotive,56.49,111.05,0.618
+208,Product 0208,Home & Kitchen,35.2,72.23,1.291
+209,Product 0209,Food & Beverage,21.3,28.92,0.204
+210,Product 0210,Food & Beverage,11.44,22.04,0.268
+211,Product 0211,Electronics,48.91,83.82,9.089
+212,Product 0212,Electronics,93.27,159.68,0.83
+213,Product 0213,Automotive,60.6,122.05,0.489
+214,Product 0214,Office Supplies,21.9,45.47,1.431
+215,Product 0215,Electronics,29.1,53.81,0.151
+216,Product 0216,Automotive,39.03,64.81,1.121
+217,Product 0217,Apparel,124.8,204.42,0.961
+218,Product 0218,Automotive,128.6,202.98,0.329
+219,Product 0219,Pharmaceuticals,120.2,187.19,0.28
+220,Product 0220,Electronics,51.96,82.24,0.554
+221,Product 0221,Automotive,215.18,285.39,1.035
+222,Product 0222,Office Supplies,30.07,39.57,1.175
+223,Product 0223,Food & Beverage,38.13,72.94,1.894
+224,Product 0224,Electronics,79.97,130.28,0.196
+225,Product 0225,Apparel,56.66,115.65,0.234
+226,Product 0226,Apparel,58.59,103.73,0.949
+227,Product 0227,Industrial Parts,24.53,31.4,0.196
+228,Product 0228,Apparel,46.3,64.07,0.104
+229,Product 0229,Food & Beverage,30.36,43.26,0.214
+230,Product 0230,Food & Beverage,18.37,38.2,0.279
+231,Product 0231,Food & Beverage,32.78,47.07,0.28
+232,Product 0232,Apparel,56.67,95.68,0.768
+233,Product 0233,Electronics,72.59,148.5,0.686
+234,Product 0234,Office Supplies,11.1,23.09,0.409
+235,Product 0235,Home & Kitchen,47.64,69.12,0.905
+236,Product 0236,Automotive,45.02,58.15,0.457
+237,Product 0237,Office Supplies,54.94,75.85,0.71
+238,Product 0238,Electronics,22.19,28.93,3.278
+239,Product 0239,Electronics,22.5,31.86,1.002
+240,Product 0240,Electronics,94.68,164.11,0.253
+241,Product 0241,Apparel,27.44,55.58,0.181
+242,Product 0242,Electronics,36.97,63.09,2.742
+243,Product 0243,Food & Beverage,39.41,70.23,0.733
+244,Product 0244,Pharmaceuticals,30.75,43.71,1.352
+245,Product 0245,Office Supplies,63.5,122.59,0.585
+246,Product 0246,Food & Beverage,60.39,107.2,0.587
+247,Product 0247,Office Supplies,43.8,86.92,25.555
+248,Product 0248,Apparel,31.94,65.69,2.19
+249,Product 0249,Home & Kitchen,41.67,64.41,0.13
+250,Product 0250,Food & Beverage,50.08,66.46,0.19

@@ -1,0 +1,61 @@
+supplier_id,supplier_name,region,reliability_score,avg_lead_time_days
+1,Supplier 001,North America,0.92,21
+2,Supplier 002,Latin America,0.827,27
+3,Supplier 003,Latin America,0.582,24
+4,Supplier 004,Asia Pacific,0.778,31
+5,Supplier 005,Asia Pacific,0.66,36
+6,Supplier 006,Middle East & Africa,0.782,19
+7,Supplier 007,North America,0.717,37
+8,Supplier 008,Latin America,0.866,16
+9,Supplier 009,Europe,0.573,44
+10,Supplier 010,North America,0.857,24
+11,Supplier 011,Asia Pacific,0.941,33
+12,Supplier 012,Middle East & Africa,0.669,39
+13,Supplier 013,Latin America,0.643,36
+14,Supplier 014,Latin America,0.846,38
+15,Supplier 015,Latin America,0.743,25
+16,Supplier 016,Latin America,0.72,4
+17,Supplier 017,Asia Pacific,0.94,23
+18,Supplier 018,North America,0.578,10
+19,Supplier 019,Middle East & Africa,0.794,40
+20,Supplier 020,Asia Pacific,0.839,12
+21,Supplier 021,Asia Pacific,0.775,12
+22,Supplier 022,Europe,0.713,13
+23,Supplier 023,North America,0.57,29
+24,Supplier 024,Middle East & Africa,0.644,26
+25,Supplier 025,Latin America,0.644,42
+26,Supplier 026,Latin America,0.779,20
+27,Supplier 027,Asia Pacific,0.948,14
+28,Supplier 028,Middle East & Africa,0.526,5
+29,Supplier 029,Asia Pacific,0.978,3
+30,Supplier 030,Asia Pacific,0.799,18
+31,Supplier 031,Asia Pacific,0.854,41
+32,Supplier 032,Europe,0.614,24
+33,Supplier 033,North America,0.844,40
+34,Supplier 034,Asia Pacific,0.372,7
+35,Supplier 035,Middle East & Africa,0.713,6
+36,Supplier 036,North America,0.847,38
+37,Supplier 037,Middle East & Africa,0.903,7
+38,Supplier 038,Middle East & Africa,0.872,5
+39,Supplier 039,Europe,0.887,19
+40,Supplier 040,Latin America,0.779,41
+41,Supplier 041,North America,0.373,31
+42,Supplier 042,Latin America,0.888,7
+43,Supplier 043,Latin America,0.816,38
+44,Supplier 044,Europe,0.785,38
+45,Supplier 045,North America,0.72,36
+46,Supplier 046,Middle East & Africa,0.548,40
+47,Supplier 047,Asia Pacific,0.707,13
+48,Supplier 048,Middle East & Africa,0.667,44
+49,Supplier 049,Latin America,0.792,16
+50,Supplier 050,Latin America,0.773,36
+51,Supplier 051,Latin America,0.947,27
+52,Supplier 052,North America,0.575,35
+53,Supplier 053,Europe,0.965,29
+54,Supplier 054,Asia Pacific,0.351,29
+55,Supplier 055,Asia Pacific,0.934,28
+56,Supplier 056,North America,0.953,35
+57,Supplier 057,Asia Pacific,0.927,34
+58,Supplier 058,North America,0.888,8
+59,Supplier 059,Latin America,0.819,37
+60,Supplier 060,Latin America,0.721,25

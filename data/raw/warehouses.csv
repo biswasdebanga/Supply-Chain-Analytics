@@ -1,0 +1,13 @@
+warehouse_id,warehouse_name,region,capacity_units
+1,Warehouse A,Asia Pacific,74992
+2,Warehouse B,Europe,43765
+3,Warehouse C,Asia Pacific,100138
+4,Warehouse D,Asia Pacific,61695
+5,Warehouse E,Latin America,44127
+6,Warehouse F,Middle East & Africa,104914
+7,Warehouse G,Middle East & Africa,42645
+8,Warehouse H,Europe,107470
+9,Warehouse I,Europe,41072
+10,Warehouse J,Latin America,76518
+11,Warehouse K,North America,125039
+12,Warehouse L,Asia Pacific,49723

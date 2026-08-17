@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Supply Chain &amp; Inventory Analytics — Control Tower</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0B121F;
+    --panel: #121B2C;
+    --panel-2: #17223689;
+    --line: #24314A;
+    --text: #E7ECF5;
+    --muted: #8B99B3;
+    --amber: #F5A524;
+    --teal: #35D6C1;
+    --red: #FB6A6A;
+    --violet: #8B8FF7;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 90% -10%, #16233a55, transparent),
+      var(--bg);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    padding-bottom:60px;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  header{
+    padding:36px 40px 24px;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .brand-eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:.18em;
+    color:var(--teal);
+    text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  h1{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:30px;
+    margin:0;
+    font-weight:700;
+    letter-spacing:-0.01em;
+  }
+  .subtitle{color:var(--muted); font-size:14px; margin-top:6px;}
+  .status-pill{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--teal);
+    border:1px solid #1f4d46;
+    background:#0f2622;
+    padding:6px 12px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--teal); box-shadow:0 0 8px var(--teal);}
+  main{padding:28px 40px;}
+
+  .kpi-row{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:14px;
+    margin-bottom:32px;
+  }
+  .kpi-card{
+    background:linear-gradient(180deg, var(--panel), #0F1928);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:18px 18px 16px;
+    position:relative;
+    overflow:hidden;
+  }
+  .kpi-card::before{
+    content:"";
+    position:absolute; left:0; top:0; bottom:0; width:3px;
+    background:var(--accent, var(--teal));
+  }
+  .kpi-label{
+    font-size:11px; text-transform:uppercase; letter-spacing:.09em;
+    color:var(--muted); margin-bottom:10px;
+  }
+  .kpi-value{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:28px; font-weight:600;
+    color:var(--text);
+  }
+  .kpi-sub{font-size:11px; color:var(--muted); margin-top:6px;}
+
+  .grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:18px;
+    margin-bottom:18px;
+  }
+  .grid.thirds{grid-template-columns:1fr 1fr;}
+  .panel{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:20px 22px 14px;
+  }
+  .panel h2{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:15px;
+    margin:0 0 2px;
+    font-weight:600;
+  }
+  .panel .desc{color:var(--muted); font-size:12px; margin-bottom:14px;}
+  canvas{max-height:280px;}
+
+  table{width:100%; border-collapse:collapse; font-size:12.5px;}
+  thead th{
+    text-align:left;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--muted);
+    border-bottom:1px solid var(--line);
+    padding:8px 10px;
+  }
+  tbody td{
+    padding:8px 10px;
+    border-bottom:1px solid #182236;
+    color:var(--text);
+  }
+  tbody tr:hover{background:#152036;}
+  .badge{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    padding:3px 8px;
+    border-radius:20px;
+    display:inline-block;
+    font-weight:600;
+  }
+  .badge.stockout{background:#3a1414; color:var(--red); border:1px solid #5c2020;}
+  .badge.critical{background:#3a2810; color:var(--amber); border:1px solid #5c3f14;}
+  .badge.reorder{background:#12293a; color:#5cb8f5; border:1px solid #1c4560;}
+
+  .section-title{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    margin:36px 0 12px;
+    display:flex; align-items:center; gap:12px;
+  }
+  .section-title::after{content:""; flex:1; height:1px; background:var(--line);}
+
+  footer{
+    padding:24px 40px; color:var(--muted); font-size:11.5px;
+    border-top:1px solid var(--line); margin-top:20px;
+  }
+
+  @media (max-width: 1000px){
+    .kpi-row{grid-template-columns:repeat(2,1fr);}
+    .grid, .grid.thirds{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="brand-eyebrow">Ops Analytics · Warehouse &amp; Supplier Network</div>
+    <h1>Supply Chain &amp; Inventory Control Tower</h1>
+    <div class="subtitle">120,000+ order records · 250 SKUs · 60 suppliers · 12 warehouses · Jan 2024 – Jan 2026</div>
+  </div>
+  <div class="status-pill"><span class="dot"></span> LIVE FROM sql/supply_chain.db</div>
+</header>
+
+<main>
+  <div class="kpi-row" id="kpiRow"></div>
+
+  <div class="section-title">Delivery Performance</div>
+  <div class="grid">
+    <div class="panel">
+      <h2>Supplier Delay Leaderboard</h2>
+      <div class="desc">Suppliers with the highest share of delayed orders (min. 50 orders)</div>
+      <canvas id="supplierDelayChart"></canvas>
+    </div>
+    <div class="panel">
+      <h2>Lead Time by Supplier Region</h2>
+      <div class="desc">Actual vs. promised lead time, in days</div>
+      <canvas id="leadTimeChart"></canvas>
+    </div>
+  </div>
+
+  <div class="section-title">Demand &amp; Fulfillment</div>
+  <div class="grid">
+    <div class="panel">
+      <h2>Top High-Demand Products</h2>
+      <div class="desc">Ranked by total units ordered across the network</div>
+      <canvas id="demandChart"></canvas>
+    </div>
+    <div class="panel">
+      <h2>Fulfillment Rate by Warehouse</h2>
+      <div class="desc">Units delivered ÷ units ordered</div>
+      <canvas id="fulfillmentChart"></canvas>
+    </div>
+  </div>
+
+  <div class="section-title">Inventory Health</div>
+  <div class="grid">
+    <div class="panel">
+      <h2>Stock Level vs. Reorder Point (Monthly)</h2>
+      <div class="desc">Network-wide average, with stock-out rate overlay</div>
+      <canvas id="stockTrendChart"></canvas>
+    </div>
+    <div class="panel">
+      <h2>Critical Inventory — Live Shortages</h2>
+      <div class="desc">Product / warehouse lanes below reorder point right now</div>
+      <div style="max-height:280px; overflow:auto;">
+        <table id="shortageTable">
+          <thead><tr><th>Product</th><th>Warehouse</th><th>Stock</th><th>Status</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Operational Bottlenecks</div>
+  <div class="panel">
+    <h2>Worst Supplier × Warehouse Lanes</h2>
+    <div class="desc">Highest share of delayed / cancelled / backordered orders (min. 30 orders per lane)</div>
+    <table id="bottleneckTable">
+      <thead><tr><th>Supplier</th><th>Warehouse</th><th>Orders</th><th>% Problem Orders</th><th>Fulfillment %</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</main>
+
+<footer>
+  Generated from a synthetic dataset built for this project (see <span class="mono">data/generate_data.py</span>). Pipeline: SQLite → SQL analysis queries → Python (pandas) → this dashboard. No external network calls except the Chart.js CDN script and Google Fonts.
+</footer>
+
+<script src="data_embed.js"></script>
+<script>
+const D = SUMMARY_DATA;
+const rows = key => D[key].rows;
+
+Chart.defaults.color = '#8B99B3';
+Chart.defaults.font.family = "'Inter', sans-serif";
+Chart.defaults.borderColor = '#24314A';
+
+// ---------- KPI row ----------
+const kpi = rows('7_delivery_kpi_scorecard')[0];
+const kpiDefs = [
+  {label:'Total Orders', value: Number(kpi.total_orders).toLocaleString(), accent:'#35D6C1'},
+  {label:'On-Time Rate', value: kpi.on_time_rate_pct + '%', accent:'#35D6C1'},
+  {label:'Delayed Rate', value: kpi.delayed_rate_pct + '%', accent:'#F5A524'},
+  {label:'Cancelled Rate', value: kpi.cancelled_rate_pct + '%', accent:'#FB6A6A'},
+  {label:'Avg Delay vs Promised', value: kpi.avg_delay_vs_promised_days + ' days', accent:'#8B8FF7'},
+];
+document.getElementById('kpiRow').innerHTML = kpiDefs.map(k => `
+  <div class="kpi-card" style="--accent:${k.accent}">
+    <div class="kpi-label">${k.label}</div>
+    <div class="kpi-value mono">${k.value}</div>
+  </div>`).join('');
+
+// ---------- Supplier delay leaderboard ----------
+const sd = rows('2_supplier_delays').slice(0, 10);
+new Chart(document.getElementById('supplierDelayChart'), {
+  type: 'bar',
+  data: {
+    labels: sd.map(r => r.supplier_name),
+    datasets: [{
+      label: '% Delayed',
+      data: sd.map(r => r.pct_delayed),
+      backgroundColor: '#F5A524AA',
+      borderColor: '#F5A524',
+      borderWidth: 1,
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    plugins:{legend:{display:false}},
+    scales:{ x:{grid:{color:'#1B2740'}}, y:{grid:{display:false}} }
+  }
+});
+
+// ---------- Lead time by region ----------
+const lt = rows('4_lead_time_analysis');
+new Chart(document.getElementById('leadTimeChart'), {
+  type: 'bar',
+  data: {
+    labels: lt.map(r => r.region),
+    datasets: [
+      {label:'Actual', data: lt.map(r => r.avg_lead_time_days), backgroundColor:'#FB6A6AAA', borderColor:'#FB6A6A', borderWidth:1, borderRadius:4},
+      {label:'Promised', data: lt.map(r => r.avg_promised_lead_time_days), backgroundColor:'#35D6C1AA', borderColor:'#35D6C1', borderWidth:1, borderRadius:4},
+    ]
+  },
+  options: {
+    plugins:{legend:{labels:{boxWidth:10}}},
+    scales:{ x:{grid:{display:false}}, y:{grid:{color:'#1B2740'}} }
+  }
+});
+
+// ---------- High demand products ----------
+const hd = rows('3_high_demand_products').slice(0, 10);
+new Chart(document.getElementById('demandChart'), {
+  type: 'bar',
+  data: {
+    labels: hd.map(r => r.product_name),
+    datasets: [{
+      label:'Units Ordered',
+      data: hd.map(r => r.total_units_ordered),
+      backgroundColor:'#8B8FF7AA', borderColor:'#8B8FF7', borderWidth:1, borderRadius:4
+    }]
+  },
+  options: {
+    indexAxis:'y',
+    plugins:{legend:{display:false}},
+    scales:{ x:{grid:{color:'#1B2740'}}, y:{grid:{display:false}} }
+  }
+});
+
+// ---------- Fulfillment by warehouse ----------
+const fr = rows('5_order_fulfillment_rate');
+new Chart(document.getElementById('fulfillmentChart'), {
+  type: 'bar',
+  data: {
+    labels: fr.map(r => r.warehouse_name),
+    datasets: [{
+      label:'Fulfillment %',
+      data: fr.map(r => r.fulfillment_rate_pct),
+      backgroundColor:'#35D6C1AA', borderColor:'#35D6C1', borderWidth:1, borderRadius:4
+    }]
+  },
+  options: {
+    plugins:{legend:{display:false}},
+    scales:{ x:{grid:{display:false}, ticks:{maxRotation:60, minRotation:40}}, y:{grid:{color:'#1B2740'}, min:80, max:100} }
+  }
+});
+
+// ---------- Stock level trend ----------
+const st = rows('6_stock_level_trends');
+new Chart(document.getElementById('stockTrendChart'), {
+  data: {
+    labels: st.map(r => r.month),
+    datasets: [
+      {type:'line', label:'Avg Stock Level', data: st.map(r => r.avg_stock_level), borderColor:'#35D6C1', backgroundColor:'#35D6C1', tension:.3, yAxisID:'y'},
+      {type:'line', label:'Avg Reorder Point', data: st.map(r => r.avg_reorder_point), borderColor:'#8B99B3', borderDash:[4,4], backgroundColor:'#8B99B3', tension:.3, yAxisID:'y'},
+      {type:'bar', label:'Stock-out Rate %', data: st.map(r => r.stockout_rate_pct), backgroundColor:'#FB6A6A55', borderColor:'#FB6A6A', borderWidth:1, yAxisID:'y1'},
+    ]
+  },
+  options: {
+    plugins:{legend:{labels:{boxWidth:10}}},
+    scales:{
+      x:{grid:{display:false}},
+      y:{grid:{color:'#1B2740'}, position:'left', title:{display:true, text:'Units'}},
+      y1:{position:'right', grid:{display:false}, title:{display:true, text:'% Stock-out'}},
+    }
+  }
+});
+
+// ---------- Shortage table ----------
+const shortageBody = document.querySelector('#shortageTable tbody');
+shortageBody.innerHTML = rows('1_inventory_shortages').map(r => {
+  const cls = r.inventory_status === 'STOCK-OUT' ? 'stockout' : r.inventory_status === 'CRITICAL' ? 'critical' : 'reorder';
+  return `<tr>
+    <td>${r.product_name}</td>
+    <td>${r.warehouse_name}</td>
+    <td class="mono">${r.stock_level}</td>
+    <td><span class="badge ${cls}">${r.inventory_status}</span></td>
+  </tr>`;
+}).join('');
+
+// ---------- Bottleneck table ----------
+const bottleneckBody = document.querySelector('#bottleneckTable tbody');
+bottleneckBody.innerHTML = rows('8_operational_bottlenecks').map(r => `
+  <tr>
+    <td>${r.supplier_name}</td>
+    <td>${r.warehouse_name}</td>
+    <td class="mono">${r.total_orders}</td>
+    <td class="mono">${r.pct_problem_orders}%</td>
+    <td class="mono">${r.fulfillment_rate_pct}%</td>
+  </tr>`).join('');
+</script>
+
+</body>
+</html>

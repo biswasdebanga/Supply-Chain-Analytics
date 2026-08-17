@@ -1,0 +1,13 @@
+warehouse_name,region,total_orders,units_ordered,units_delivered,fulfillment_rate_pct
+Warehouse A,Asia Pacific,10030,2533545,2278322,89.9
+Warehouse H,Europe,9989,2519782,2277532,90.4
+Warehouse J,Latin America,10017,2526137,2283676,90.4
+Warehouse C,Asia Pacific,10079,2541973,2300841,90.5
+Warehouse F,Middle East & Africa,10025,2523264,2282784,90.5
+Warehouse I,Europe,10164,2558703,2314739,90.5
+Warehouse L,Asia Pacific,9927,2502216,2264678,90.5
+Warehouse B,Europe,10043,2527653,2293651,90.7
+Warehouse D,Asia Pacific,9791,2480028,2249905,90.7
+Warehouse E,Latin America,9874,2476099,2245610,90.7
+Warehouse K,North America,10038,2549787,2318129,90.9
+Warehouse G,Middle East & Africa,10023,2517724,2291451,91.0

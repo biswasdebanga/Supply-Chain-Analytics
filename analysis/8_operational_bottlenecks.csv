@@ -1,0 +1,21 @@
+supplier_name,warehouse_name,total_orders,pct_problem_orders,fulfillment_rate_pct
+Supplier 054,Warehouse A,174,89.7,79.8
+Supplier 041,Warehouse C,164,89.6,80.5
+Supplier 054,Warehouse G,166,88.6,78.9
+Supplier 034,Warehouse F,178,87.6,80.1
+Supplier 041,Warehouse B,155,87.1,83.0
+Supplier 054,Warehouse I,161,87.0,80.8
+Supplier 041,Warehouse G,151,86.8,82.5
+Supplier 034,Warehouse C,181,86.7,80.4
+Supplier 054,Warehouse H,142,86.6,77.8
+Supplier 054,Warehouse J,186,86.6,83.4
+Supplier 034,Warehouse K,162,86.4,82.5
+Supplier 041,Warehouse K,176,86.4,81.4
+Supplier 034,Warehouse E,183,86.3,81.4
+Supplier 054,Warehouse L,151,86.1,83.7
+Supplier 034,Warehouse H,149,85.9,85.2
+Supplier 034,Warehouse J,184,85.9,80.1
+Supplier 041,Warehouse A,180,85.6,81.7
+Supplier 041,Warehouse D,141,85.1,85.2
+Supplier 054,Warehouse F,161,85.1,82.1
+Supplier 041,Warehouse J,162,84.6,86.4

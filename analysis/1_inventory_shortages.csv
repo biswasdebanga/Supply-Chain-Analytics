@@ -1,0 +1,26 @@
+product_name,warehouse_name,stock_level,reorder_point,safety_stock,units_below_safety_stock,inventory_status
+Product 0247,Warehouse B,0,1052,420,-420,STOCK-OUT
+Product 0247,Warehouse C,0,1052,420,-420,STOCK-OUT
+Product 0247,Warehouse D,0,1052,420,-420,STOCK-OUT
+Product 0247,Warehouse E,0,1052,420,-420,STOCK-OUT
+Product 0247,Warehouse F,0,1052,420,-420,STOCK-OUT
+Product 0247,Warehouse G,0,1052,420,-420,STOCK-OUT
+Product 0247,Warehouse I,0,1052,420,-420,STOCK-OUT
+Product 0247,Warehouse K,0,1052,420,-420,STOCK-OUT
+Product 0247,Warehouse H,5,1052,420,-415,CRITICAL
+Product 0247,Warehouse A,107,1052,420,-313,CRITICAL
+Product 0247,Warehouse L,140,1052,420,-280,CRITICAL
+Product 0247,Warehouse J,154,1052,420,-266,CRITICAL
+Product 0211,Warehouse A,0,393,157,-157,STOCK-OUT
+Product 0211,Warehouse B,0,393,157,-157,STOCK-OUT
+Product 0211,Warehouse C,0,393,157,-157,STOCK-OUT
+Product 0211,Warehouse D,0,393,157,-157,STOCK-OUT
+Product 0211,Warehouse E,0,393,157,-157,STOCK-OUT
+Product 0211,Warehouse F,0,393,157,-157,STOCK-OUT
+Product 0211,Warehouse H,0,393,157,-157,STOCK-OUT
+Product 0211,Warehouse J,0,393,157,-157,STOCK-OUT
+Product 0211,Warehouse L,0,393,157,-157,STOCK-OUT
+Product 0211,Warehouse G,3,393,157,-154,CRITICAL
+Product 0211,Warehouse I,12,393,157,-145,CRITICAL
+Product 0211,Warehouse K,52,393,157,-105,CRITICAL
+Product 0149,Warehouse A,0,156,62,-62,STOCK-OUT
